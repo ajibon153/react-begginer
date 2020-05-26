@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Booklist from "./BookList/Booklist";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+// import Booklist from "./CityTours/Citytours";
+import Navbar from "./CityTours/Navbar/Navbar";
+import TourList from "./CityTours/TourList/index";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        {/* <h1>Project ke 1</h1> */}
+        {/* <Booklist /> */}
+        {/* <h1>Project ke 2</h1> */}
+        <Navbar />
+        <TourList />
+      </React.Fragment>
+    );
+  }
 }
-
 export default App;
