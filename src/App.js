@@ -29,7 +29,7 @@ class App extends Component {
 
         <div className="container">
           <div className="row">
-            <div className="col-4 bg-warning">Home</div>
+            <div className="col-4 bg-warning">Beranda</div>
             <div className="col-4 bg-danger">About</div>
             <div className="col-4 bg-primary ">List</div>
           </div>
