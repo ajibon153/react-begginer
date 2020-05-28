@@ -60,16 +60,17 @@ class App extends Component {
         {/* // 4 TodoList project   */}
         <div className="container">
           <div className="row">
-            <div className="col-10 mx-auto mt-5 col-md-8">Beranda</div>
-            <h3 className="text-capitalize text-center">Todo Input</h3>
+            <div className="col-10 mx-auto mt-5 col-md-8">
+              <h3 className="text-capitalize text-center">Todo Input</h3>
+            </div>
+            <TodoInput
+              item={this.state.item}
+              handleChange={this.handleChange}
+              handleSubmit={this.handleSubmit}
+              editItem={this.state.editItem}
+            />
           </div>
         </div>
-        <TodoInput
-          item={this.state.item}
-          handleChange={this.handleChange}
-          handleSubmit={this.handleSubmit}
-          editItem={this.state.editItem}
-        />
         <TodoList
           item={this.state.items}
           handleClear={this.handleClear}
