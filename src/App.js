@@ -7,55 +7,12 @@ import TourList from "./2CityTours/TourList/index";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import PersonList from "./3PesonList/PersonList";
 import Form from "./3PesonList/Form";
-
-import TodoList from "./4TodoList/TodoList";
-import TodoInput from "./4TodoList/TodoInput";
-// import uuid from "uuid";
-import { v4 as uuidv4 } from "uuid";
-
-import "bootstrap/dist/css/bootstrap.min.css";
+import TodoList from "./4TodoList/Main";
 
 class App extends Component {
-  state = {
-    items: [
-      { id: 1, title: "Wake up" },
-      { id: 2, title: "Make up" },
-    ],
-    id: uuidv4(),
-    item: "",
-    editItem: false,
-  };
-  handleChange = (e) => {
-    this.setState({ item: e.target.value });
-  };
-  handleSubmit = (e) => {
-    e.preventDefault();
-    const newItem = {
-      id: this.state.id,
-      title: this.state.item,
-    };
-    const updateItem = [...this.state.items, newItem];
-    this.setState(
-      {
-        items: updateItem,
-        id: uuidv4(),
-        item: "",
-        editItem: false,
-      },
-      () => console.log(this.state)
-    );
-  };
-  handleClear = (e) => {
-    console.log("clear");
-  };
-  handleDelete = (e) => {
-    console.log("delete");
-  };
-  handleEdit = (e) => {
-    console.log("edit");
-  };
-
   render() {
+    // console.log(this.state.items);
+
     return (
       <React.Fragment>
         {/* <h1>Project ke 1</h1> */}
@@ -70,25 +27,7 @@ class App extends Component {
         {/* <Form />*/}
 
         {/* // 4 TodoList project   */}
-        <div className="container">
-          <div className="row">
-            <div className="col-10 mx-auto mt-5 col-md-8">
-              <h3 className="text-capitalize text-center">Todo Input</h3>
-            </div>
-            <TodoInput
-              item={this.state.item}
-              handleChange={this.handleChange}
-              handleSubmit={this.handleSubmit}
-              editItem={this.state.editItem}
-            />
-          </div>
-        </div>
-        <TodoList
-          item={this.state.items}
-          handleClear={this.handleClear}
-          handleDelete={this.handleDelete}
-          handleEdit={this.handleEdit}
-        />
+        <TodoList />
       </React.Fragment>
     );
   }
