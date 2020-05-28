@@ -7,7 +7,11 @@ import TourList from "./2CityTours/TourList/index";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import PersonList from "./3PesonList/PersonList";
 import Form from "./3PesonList/Form";
+
+// other import in the file
 import TodoList from "./4TodoList/Main";
+
+import BeachResort from "./5BeachResort/index";
 
 class App extends Component {
   render() {
@@ -27,7 +31,10 @@ class App extends Component {
         {/* <Form />*/}
 
         {/* // 4 TodoList project   */}
-        <TodoList />
+        {/* <TodoList /> */}
+
+        {/* // 5 resort beach app */}
+        <BeachResort />
       </React.Fragment>
     );
   }
