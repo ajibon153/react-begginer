@@ -10,32 +10,72 @@ import Form from "./3PesonList/Form";
 
 import TodoList from "./4TodoList/TodoList";
 import TodoInput from "./4TodoList/TodoInput";
-import uuid from "uuid";
+// import uuid from "uuid";
+import { v4 as uuidv4 } from "uuid";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
+  state = {
+    items: [
+      { id: 1, title: "Wake up" },
+      { id: 2, title: "Make up" },
+    ],
+    id: uuidv4(),
+    item: "",
+    editItem: false,
+  };
+  handleChange = (e) => {
+    console.log("change");
+  };
+  handleSubmit = (e) => {
+    console.log("submit");
+  };
+  handleClear = (e) => {
+    console.log("clear");
+  };
+  handleDelete = (e) => {
+    console.log("delete");
+  };
+  handleEdit = (e) => {
+    console.log("edit");
+  };
+
   render() {
+    console.log(this.state);
+
     return (
       <React.Fragment>
         {/* <h1>Project ke 1</h1> */}
         {/* <Booklist /> */}
+
         {/* <h1>Project ke 2</h1> */}
         {/* <Navbar />
         <TourList /> */}
+
         {/* Project ke 3 */}
         {/* <PersonList /> */}
         {/* <Form />*/}
-        {/* // 4 TodoList project   */}
 
+        {/* // 4 TodoList project   */}
         <div className="container">
           <div className="row">
-            <div className="col-4 bg-warning">Beranda</div>
-            <div className="col-4 bg-danger">About</div>
-            <div className="col-4 bg-primary ">List</div>
+            <div className="col-10 mx-auto mt-5 col-md-8">Beranda</div>
+            <h3 className="text-capitalize text-center">Todo Input</h3>
           </div>
         </div>
-        <TodoInput />
-        <TodoList />
+        <TodoInput
+          item={this.state.item}
+          handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit}
+          editItem={this.state.editItem}
+        />
+        <TodoList
+          item={this.state.items}
+          handleClear={this.handleClear}
+          handleDelete={this.handleDelete}
+          handleEdit={this.handleEdit}
+        />
       </React.Fragment>
     );
   }
