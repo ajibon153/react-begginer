@@ -16,20 +16,23 @@ export default class NavBar extends Component {
     return (
       <nav>
         <div className="navbar">
-          <div className="nav-center">
-            <div className="nav-header">
-              <Link to="/">
-                <img src={logo} alt="Beach Resort Logo" />
-              </Link>
-              <button
-                type="button"
-                className="nav-btn"
-                onClick={this.handleToogle}
-              >
-                <FaAlignRight className="nav-icon" />
-              </button>
-            </div>
+          {/* <div className="nav-center"> */}
+          <div className="nav-header">
+            <Link to="/">
+              <img src={logo} alt="Beach Resort Logo" />
+            </Link>
           </div>
+          <button
+            type="button"
+            className="nav-btn"
+            onClick={this.handleToogle}
+            style={{
+              position: "absolute",
+              right: "10px",
+            }}
+          >
+            <FaAlignRight className="nav-icon" />
+          </button>
           <ul
             className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}
           >
@@ -41,6 +44,7 @@ export default class NavBar extends Component {
             </li>
           </ul>
         </div>
+        {/* </div> */}
       </nav>
     );
   }

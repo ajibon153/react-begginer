@@ -13,7 +13,7 @@ export default class index extends Component {
     return (
       <>
         <NavBar />
-        Main Resort App
+        {/* Main Resort App */}
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/rooms" component={Rooms} />
