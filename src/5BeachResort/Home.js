@@ -4,6 +4,7 @@ import Banner from "./Banner";
 import Service from "./Service";
 import { Link } from "react-router-dom";
 import FeaturedRoom from "./FeaturedRoom";
+import HeroStyled from "./HeroStyled";
 
 export default function Home() {
   // return <div>Hai</div>;

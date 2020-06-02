@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 
-import Booklist from "./1BookList/Booklist";
-import Navbar from "./2CityTours/Navbar/Navbar";
-import TourList from "./2CityTours/TourList/index";
+// import Booklist from "./1BookList/Booklist";
+// import Navbar from "./2CityTours/Navbar/Navbar";
+// import TourList from "./2CityTours/TourList/index";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import PersonList from "./3PesonList/PersonList";
-import Form from "./3PesonList/Form";
+// import PersonList from "./3PesonList/PersonList";
+// import Form from "./3PesonList/Form";
 
-// other import in the file
-import TodoList from "./4TodoList/Main";
+// // other import in the file
+// import TodoList from "./4TodoList/Main";
 
 import BeachResort from "./5BeachResort/index";
 

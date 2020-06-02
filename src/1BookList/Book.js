@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Button from "./Button";
+// import Button from "./Button";
 
 export default class Book extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ export default class Book extends Component {
     });
   };
   lowerCount = () => {
-    if (this.state.count == 0) {
+    if (this.state.count === 0) {
       this.setState({
         count: 0,
       });

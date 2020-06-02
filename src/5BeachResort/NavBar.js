@@ -21,28 +21,28 @@ export default class NavBar extends Component {
             <Link to="/">
               <img src={logo} alt="Beach Resort Logo" />
             </Link>
+            <button
+              type="button"
+              className="nav-btn"
+              onClick={this.handleToogle}
+              style={{
+                position: "absolute",
+                right: "10px",
+              }}
+            >
+              <FaAlignRight className="nav-icon" />
+            </button>
+            <ul
+              className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}
+            >
+              <li style={{ display: "block" }}>
+                <Link to="/">Home</Link>
+              </li>
+              <li style={{ display: "block" }}>
+                <Link to="/rooms">Rooms</Link>
+              </li>
+            </ul>
           </div>
-          <button
-            type="button"
-            className="nav-btn"
-            onClick={this.handleToogle}
-            style={{
-              position: "absolute",
-              right: "10px",
-            }}
-          >
-            <FaAlignRight className="nav-icon" />
-          </button>
-          <ul
-            className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}
-          >
-            <li style={{ display: "block" }}>
-              <Link to="/">Home</Link>
-            </li>
-            <li style={{ display: "block" }}>
-              <Link to="/rooms">Rooms</Link>
-            </li>
-          </ul>
         </div>
         {/* </div> */}
       </nav>
